@@ -1,5 +1,3 @@
-package Mundial;
-
 import java.util.ArrayList;
 
 public class EtapaMundial {
@@ -30,9 +28,15 @@ public class EtapaMundial {
         return partidos;
     }
 
-    public void getEquiposQueAvanzan(ArrayList<Equipo> equipos) {
-
+    public ArrayList<Equipo> getEquiposQueAvanzan() {
+    return null;
     }
 
+    public void agregarPartidos(Partido partido ){
+        getPartidos().add(partido);
+    }
+    public void removerPartidos(Partido partido){
+        getPartidos().add(partido);
+    }
 
 }

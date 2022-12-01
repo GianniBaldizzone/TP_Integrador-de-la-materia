@@ -1,5 +1,3 @@
-package Mundial;
-
 import java.util.ArrayList;
 
 public class Grupo extends EtapaMundial{
@@ -8,7 +6,8 @@ public class Grupo extends EtapaMundial{
     }
 
 
-    public void getEquiposQueAvanzan() {
+    public ArrayList<Equipo> getEquiposQueAvanzan() {
+        return null;
 
     }
 }

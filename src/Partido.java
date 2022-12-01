@@ -1,5 +1,3 @@
-package Mundial;
-
 import java.util.Date;
 
 public class Partido {
@@ -8,10 +6,11 @@ public class Partido {
     private Equipo visitante;
     private Resultado resultado;
 
-    public Partido(Date fecha, Equipo local, Equipo visitante) {
+    public Partido(Date fecha, Equipo local, Equipo visitante,Resultado resultado) {
         this.fecha = fecha;
         this.local = local;
         this.visitante = visitante;
+        this.resultado = resultado;
     }
 
     public Date getFecha() {
