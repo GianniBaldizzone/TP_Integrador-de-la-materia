@@ -1,6 +1,9 @@
+package Mundial;
+
 public class Resultado {
     private int golesLocales;
     private int golesVisitantes;
+
 
     public Resultado(int golesLocales, int golesVisitantes) {
         this.golesLocales = golesLocales;
@@ -29,15 +32,22 @@ public class Resultado {
 
     public boolean ganoLocal(){
         if (getGolesLocales()>getGolesVisitantes()) {
+            System.out.println("Gano el equipo local");
             return true;
-        }else{
+        }else if (getGolesLocales()<getGolesVisitantes()){
+            System.out.println("Perdio el equipo local");
+            return false;
+        } else {
+            System.out.println("Empato el local");
             return false;
         }
     }
     public boolean empate(){
         if (getGolesLocales()==getGolesVisitantes()) {
+            System.out.println("Hubo empate");
             return true;
         }else{
+            System.out.println("No hubo empate");
             return false;
         }
     }
