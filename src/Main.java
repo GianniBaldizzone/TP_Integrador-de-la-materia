@@ -45,12 +45,16 @@ public class Main {
         Equipo coreaDelSur = new Equipo("Corea del Sur");
 
         Grupo grupoA = new Grupo("Grupa A",new ArrayList<Partido>(0));
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+        grupoA.agregarEquipo(catar);
+        grupoA.agregarEquipo(ecuador);
+        grupoA.agregarEquipo(holanda);
+        grupoA.agregarEquipo(senegal);
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,ecuador,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),senegal,holanda,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,senegal,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),holanda,ecuador,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),holanda,catar,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),ecuador,senegal,new Resultado(0,2)));
 
         Grupo grupoB = new Grupo("Grupa B",new ArrayList<Partido>(0));
 
