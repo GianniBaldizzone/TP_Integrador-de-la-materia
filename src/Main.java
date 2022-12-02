@@ -4,6 +4,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
+        //Equipos
         Equipo catar = new Equipo("Catar");
         Equipo ecuador = new Equipo("Ecuador");
         Equipo holanda = new Equipo("Holanda");
@@ -44,6 +45,7 @@ public class Main {
         Equipo uruguay = new Equipo("Uruguay");
         Equipo coreaDelSur = new Equipo("Corea del Sur");
 
+        //Grupos
         Grupo grupoA = new Grupo("Grupa A",new ArrayList<Partido>(0));
         System.out.println("Grupo A");
         grupoA.agregarEquipo(catar);
@@ -52,16 +54,17 @@ public class Main {
         grupoA.agregarEquipo(senegal);
         grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,ecuador,new Resultado(0,2)));
         System.out.println(grupoA.getPartidos().get(0).getLocal().getNombre()+" "+grupoA.getPartidos().get(0).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(0).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(0).getVisitante().getNombre());
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),senegal,holanda,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),senegal,holanda,new Resultado(2,0)));
         System.out.println(grupoA.getPartidos().get(1).getLocal().getNombre()+" "+grupoA.getPartidos().get(1).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(1).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(1).getVisitante().getNombre());
         grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,senegal,new Resultado(0,2)));
         System.out.println(grupoA.getPartidos().get(2).getLocal().getNombre()+" "+grupoA.getPartidos().get(2).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(2).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(2).getVisitante().getNombre());
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),holanda,ecuador,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),holanda,ecuador,new Resultado(2,0)));
         System.out.println(grupoA.getPartidos().get(3).getLocal().getNombre()+" "+grupoA.getPartidos().get(3).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(3).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(3).getVisitante().getNombre());
         grupoA.agregarPartidos(new Partido(new Date(3,4,2022),holanda,catar,new Resultado(0,2)));
         System.out.println(grupoA.getPartidos().get(4).getLocal().getNombre()+" "+grupoA.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(4).getVisitante().getNombre());
         grupoA.agregarPartidos(new Partido(new Date(3,4,2022),ecuador,senegal,new Resultado(0,2)));
         System.out.println(grupoA.getPartidos().get(5).getLocal().getNombre()+" "+grupoA.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(5).getVisitante().getNombre());
+        grupoA.fijarPuntajeDelGrupo(grupoA);
         System.out.println("");
 
         Grupo grupoB = new Grupo("Grupa B",new ArrayList<Partido>(0));
@@ -82,6 +85,7 @@ public class Main {
         System.out.println(grupoB.getPartidos().get(4).getLocal().getNombre()+" "+grupoB.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoB.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoB.getPartidos().get(4).getVisitante().getNombre());
         grupoB.agregarPartidos(new Partido(new Date(3,4,2022),gales,inglaterra,new Resultado(0,2)));
         System.out.println(grupoB.getPartidos().get(5).getLocal().getNombre()+" "+grupoB.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoB.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoB.getPartidos().get(5).getVisitante().getNombre());
+        grupoB.fijarPuntajeDelGrupo(grupoB);
         System.out.println("");
 
         Grupo grupoC = new Grupo("Grupo C",new ArrayList<Partido>(0));
@@ -102,6 +106,7 @@ public class Main {
         System.out.println(grupoC.getPartidos().get(4).getLocal().getNombre()+" "+grupoC.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoC.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoC.getPartidos().get(4).getVisitante().getNombre());
         grupoC.agregarPartidos(new Partido(new Date(3,4,2022),polonia,argentina,new Resultado(0,2)));
         System.out.println(grupoC.getPartidos().get(5).getLocal().getNombre()+" "+grupoC.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoC.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoC.getPartidos().get(5).getVisitante().getNombre());
+        grupoC.fijarPuntajeDelGrupo(grupoC);
         System.out.println("");
 
         Grupo grupoD = new Grupo("Grupa D",new ArrayList<Partido>(0));
@@ -122,6 +127,7 @@ public class Main {
         System.out.println(grupoD.getPartidos().get(4).getLocal().getNombre()+" "+grupoD.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoD.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoD.getPartidos().get(4).getVisitante().getNombre());
         grupoD.agregarPartidos(new Partido(new Date(3,4,2022),tunez,francia,new Resultado(0,2)));
         System.out.println(grupoD.getPartidos().get(5).getLocal().getNombre()+" "+grupoD.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoD.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoD.getPartidos().get(5).getVisitante().getNombre());
+        grupoD.fijarPuntajeDelGrupo(grupoD);
         System.out.println("");
 
         Grupo grupoE = new Grupo("Grupa E",new ArrayList<Partido>(0));
@@ -142,6 +148,7 @@ public class Main {
         System.out.println(grupoE.getPartidos().get(4).getLocal().getNombre()+" "+grupoE.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoE.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoE.getPartidos().get(4).getVisitante().getNombre());
         grupoE.agregarPartidos(new Partido(new Date(3,4,2022),japón,españa,new Resultado(0,2)));
         System.out.println(grupoE.getPartidos().get(5).getLocal().getNombre()+" "+grupoE.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoE.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoE.getPartidos().get(5).getVisitante().getNombre());
+        grupoE.fijarPuntajeDelGrupo(grupoE);
         System.out.println("");
 
         Grupo grupoF = new Grupo("Grupa F",new ArrayList<Partido>(0));
@@ -162,6 +169,7 @@ public class Main {
         System.out.println(grupoF.getPartidos().get(4).getLocal().getNombre()+" "+grupoF.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoF.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoF.getPartidos().get(4).getVisitante().getNombre());
         grupoF.agregarPartidos(new Partido(new Date(3,4,2022),canadá,marruecos,new Resultado(0,2)));
         System.out.println(grupoF.getPartidos().get(5).getLocal().getNombre()+" "+grupoF.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoF.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoF.getPartidos().get(5).getVisitante().getNombre());
+        grupoF.fijarPuntajeDelGrupo(grupoF);
         System.out.println("");
 
         Grupo grupoG = new Grupo("Grupa G",new ArrayList<Partido>(0));
@@ -182,6 +190,7 @@ public class Main {
         System.out.println(grupoG.getPartidos().get(4).getLocal().getNombre()+" "+grupoG.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoG.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoG.getPartidos().get(4).getVisitante().getNombre());
         grupoG.agregarPartidos(new Partido(new Date(3,4,2022),camerún,brasil,new Resultado(0,2)));
         System.out.println(grupoG.getPartidos().get(5).getLocal().getNombre()+" "+grupoG.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoG.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoG.getPartidos().get(5).getVisitante().getNombre());
+        grupoG.fijarPuntajeDelGrupo(grupoG);
         System.out.println("");
 
         Grupo grupoH = new Grupo("Grupa H",new ArrayList<Partido>(0));
@@ -202,8 +211,9 @@ public class Main {
         System.out.println(grupoH.getPartidos().get(4).getLocal().getNombre()+" "+grupoH.getPartidos().get(4).getResultado().getGolesLocales()+"-"+grupoH.getPartidos().get(4).getResultado().getGolesVisitantes()+" "+grupoH.getPartidos().get(4).getVisitante().getNombre());
         grupoH.agregarPartidos(new Partido(new Date(3,4,2022),coreaDelSur,portugal,new Resultado(0,2)));
         System.out.println(grupoH.getPartidos().get(5).getLocal().getNombre()+" "+grupoH.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoH.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoH.getPartidos().get(5).getVisitante().getNombre());
+        grupoH.fijarPuntajeDelGrupo(grupoH);
         System.out.println("");
-
+       //Grupos
 
 
 
