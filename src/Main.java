@@ -4,7 +4,91 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
+        Equipo catar = new Equipo("Catar");
+        Equipo ecuador = new Equipo("Ecuador");
+        Equipo holanda = new Equipo("Holanda");
+        Equipo senegal = new Equipo("Senegal");
 
+        Equipo  inglaterra = new Equipo("Inglaterra");
+        Equipo  iran = new Equipo("Irán");
+        Equipo  estadosUnidos = new Equipo("Estados Unidos");
+        Equipo  gales = new Equipo("Gales");
+
+        Equipo argentina = new Equipo("Argentina");
+        Equipo mexico = new Equipo("Mexico");
+        Equipo polonia = new Equipo("Polonia");
+        Equipo arabiaSaudita = new Equipo("Arabia Saudita");
+
+        Equipo francia = new Equipo("Francia");
+        Equipo australia = new Equipo("Australia");
+        Equipo dinamarca = new Equipo("Dinamarca");
+        Equipo tunez = new Equipo("Túnez");
+
+        Equipo españa = new Equipo("España");
+        Equipo costaRica = new Equipo("Costa Rica");
+        Equipo alemania = new Equipo("Alemania");
+        Equipo japón = new Equipo("Japón");
+
+        Equipo  bélgica = new Equipo("Bélgica");
+        Equipo  canadá= new Equipo("Canadá");
+        Equipo  marruecos= new Equipo("Marruecos");
+        Equipo  croacia= new Equipo("Croacia");
+
+        Equipo brasil= new Equipo("Brasil");
+        Equipo serbia = new Equipo("Serbia");
+        Equipo suiza = new Equipo("Suiza");
+        Equipo camerún = new Equipo("Camerún");
+
+        Equipo portugal = new Equipo("Portugal");
+        Equipo ghana = new Equipo("Ghana");
+        Equipo uruguay = new Equipo("Uruguay");
+        Equipo coreaDelSur = new Equipo("Corea del Sur");
+
+        Grupo grupoA = new Grupo("Grupa A",new ArrayList<Partido>(0));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),,,new Resultado(0,2)));
+
+        Grupo grupoB = new Grupo("Grupa B",new ArrayList<Partido>(0));
+
+        Grupo grupoC = new Grupo("Grupa C",new ArrayList<Partido>(0));
+
+        Grupo grupoD = new Grupo("Grupa D",new ArrayList<Partido>(0));
+
+        Grupo grupoE = new Grupo("Grupa E",new ArrayList<Partido>(0));
+
+        Grupo grupoF = new Grupo("Grupa F",new ArrayList<Partido>(0));
+
+        Grupo grupoG = new Grupo("Grupa G",new ArrayList<Partido>(0));
+
+        Grupo grupoH = new Grupo("Grupa H",new ArrayList<Partido>(0));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Llaves
         Equipo gianniTeam = new Equipo("GianniTeam");
         Equipo gianniTeam1 = new Equipo("GianniTeam1");
         Equipo gianniTeam2 = new Equipo("GianniTeam2");
@@ -83,6 +167,7 @@ public class Main {
         System.out.println(semifinal.getEquiposQueAvanzan().get(0).getNombre()+" "+finalMundial.getPartidos().get(0).getResultado().getGolesLocales()+"-"+finalMundial.getPartidos().get(0).getResultado().getGolesVisitantes()+" "+semifinal.getEquiposQueAvanzan().get(1).getNombre());
         System.out.println("");
         System.out.println("GANADOR DEL MUNDIAL : "+finalMundial.getEquiposQueAvanzan().get(0).getNombre());
+        //Llaves
 
 
 
@@ -96,23 +181,6 @@ public class Main {
 
 
 
-
-
-
-        //Equipo argentina = new Equipo("Argentina" );
-        //Equipo polonia = new Equipo("Polonia");
-        //Llave semifinalMundial = new Llave("Final", new ArrayList<>());
-        //Partido partidoDelMiercoles = new Partido(new Date(2022, 10, 28), argentina, polonia);
-        //partidoDelMiercoles.getResultado().setGolesLocales(3);
-        //partidoDelMiercoles.getResultado().setGolesVisitantes(2);
-
-        //ArrayList<Equipo> finalistas = semifinalMundial.getEquiposQueAvanzan();
-        //Partido partidoFinalMundial = new Partido(new Date(), finalistas.get(0), finalistas.get(1));
-        //partidoFinalMundial.getResultado().setGolesLocales(1);
-        //ArrayList<Partido> partidosFinal = new ArrayList<>();
-        //partidosFinal.add(partidoFinalMundial);
-        //Llave finalMundial = new Llave("Final mundial", partidosFinal);
-        //finalMundial.getEquiposQueAvanzan();
 
 
 

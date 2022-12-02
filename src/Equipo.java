@@ -4,10 +4,20 @@ public class Equipo {
     private String nombre;
     private ArrayList<Partido> partidosJugados;
 
+    private int puntaje;
+
+    public int getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
+    }
 
     public Equipo(String nombre) {
         this.nombre = nombre;
         this.partidosJugados = new ArrayList<Partido>(0);
+        this.puntaje= puntaje;
     }
 
     public String getNombre() {
