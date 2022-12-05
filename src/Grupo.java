@@ -59,8 +59,8 @@ public class Grupo extends EtapaMundial{
         Collections.sort(equipos, Comparator.comparing(Equipo::getPuntaje));
         equiposQueAvanzan.add(equipos.get(equipos.size()-2));
         equiposQueAvanzan.add(equipos.get(equipos.size()-1));
-        System.out.println("Primer lugar: "+equipos.get(equipos.size()-1).getNombre());
-        System.out.println("Segundo lugar: "+equipos.get(equipos.size()-2).getNombre());
+        //System.out.println("Primer lugar: "+equipos.get(equipos.size()-1).getNombre());
+        //System.out.println("Segundo lugar: "+equipos.get(equipos.size()-2).getNombre());
         return equiposQueAvanzan;
     }
             public void agregarEquipo(Equipo equipo ){
