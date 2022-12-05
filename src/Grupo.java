@@ -1,6 +1,7 @@
-package Mundial;
-
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 
 public class Grupo extends EtapaMundial{
     private ArrayList<Equipo> equipos;
@@ -54,16 +55,12 @@ public class Grupo extends EtapaMundial{
 
   }
     public ArrayList<Equipo> getEquiposQueAvanzan() {
-        ArrayList<Equipo> equiposQueAvanzan = new ArrayList<>();
-        for (int i = 0; i < getPartidos().size(); i++) {//para la suma de puntajes
-            if (getPartidos().get(i).getResultado().ganoLocal()) {
-                getPartidos().get(i).getLocal().setPuntaje(+3);
-            } else {
-                getPartidos().get(i).getVisitante().setPuntaje(+3);
-
-            }
-        }
-
+        ArrayList<Equipo> equiposQueAvanzan = new ArrayList<>(0);
+        Collections.sort(equipos, Comparator.comparing(Equipo::getPuntaje));
+        equiposQueAvanzan.add(equipos.get(equipos.size()-2));
+        equiposQueAvanzan.add(equipos.get(equipos.size()-1));
+        System.out.println("Primer lugar: "+equipos.get(equipos.size()-1).getNombre());
+        System.out.println("Segundo lugar: "+equipos.get(equipos.size()-2).getNombre());
         return equiposQueAvanzan;
     }
             public void agregarEquipo(Equipo equipo ){

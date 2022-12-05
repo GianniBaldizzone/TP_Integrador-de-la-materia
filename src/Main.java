@@ -1,5 +1,3 @@
-package Mundial;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -49,16 +47,16 @@ public class Main {
 
         //Grupos
         Grupo grupoA = new Grupo("Grupa A",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo A");
+        System.out.println("Grupo A");
         grupoA.agregarEquipo(catar);
         grupoA.agregarEquipo(ecuador);
         grupoA.agregarEquipo(holanda);
         grupoA.agregarEquipo(senegal);
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,ecuador,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,ecuador,new Resultado(4,2)));
         System.out.println(grupoA.getPartidos().get(0).getLocal().getNombre()+" "+grupoA.getPartidos().get(0).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(0).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(0).getVisitante().getNombre());
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),senegal,holanda,new Resultado(2,0)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),senegal,holanda,new Resultado(0,3)));
         System.out.println(grupoA.getPartidos().get(1).getLocal().getNombre()+" "+grupoA.getPartidos().get(1).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(1).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(1).getVisitante().getNombre());
-        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,senegal,new Resultado(0,2)));
+        grupoA.agregarPartidos(new Partido(new Date(3,4,2022),catar,senegal,new Resultado(4,2)));
         System.out.println(grupoA.getPartidos().get(2).getLocal().getNombre()+" "+grupoA.getPartidos().get(2).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(2).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(2).getVisitante().getNombre());
         grupoA.agregarPartidos(new Partido(new Date(3,4,2022),holanda,ecuador,new Resultado(2,0)));
         System.out.println(grupoA.getPartidos().get(3).getLocal().getNombre()+" "+grupoA.getPartidos().get(3).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(3).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(3).getVisitante().getNombre());
@@ -67,10 +65,11 @@ public class Main {
         grupoA.agregarPartidos(new Partido(new Date(3,4,2022),ecuador,senegal,new Resultado(0,2)));
         System.out.println(grupoA.getPartidos().get(5).getLocal().getNombre()+" "+grupoA.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoA.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoA.getPartidos().get(5).getVisitante().getNombre());
         grupoA.fijarPuntajeDelGrupo(grupoA);
+        grupoA.getEquiposQueAvanzan();
         System.out.println("");
 
         Grupo grupoB = new Grupo("Grupa B",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo B");
+        System.out.println("Grupo B");
         grupoB.agregarEquipo(inglaterra);
         grupoB.agregarEquipo(iran);
         grupoB.agregarEquipo(estadosUnidos);
@@ -90,8 +89,8 @@ public class Main {
         grupoB.fijarPuntajeDelGrupo(grupoB);
         System.out.println("");
 
-        Grupo grupoC = new Grupo("Mundial.Grupo C",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo C");
+        Grupo grupoC = new Grupo("Grupo C",new ArrayList<Partido>(0));
+        System.out.println("Grupo C");
         grupoC.agregarEquipo(argentina);
         grupoC.agregarEquipo(mexico);
         grupoC.agregarEquipo(polonia);
@@ -112,7 +111,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoD = new Grupo("Grupa D",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo D");
+        System.out.println("Grupo D");
         grupoD.agregarEquipo(francia);
         grupoD.agregarEquipo(australia);
         grupoD.agregarEquipo(dinamarca);
@@ -133,7 +132,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoE = new Grupo("Grupa E",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo E");
+        System.out.println("Grupo E");
         grupoE.agregarEquipo(españa);
         grupoE.agregarEquipo(costaRica);
         grupoE.agregarEquipo(alemania);
@@ -154,7 +153,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoF = new Grupo("Grupa F",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo F");
+        System.out.println("Grupo F");
         grupoF.agregarEquipo(bélgica);
         grupoF.agregarEquipo(canadá);
         grupoF.agregarEquipo(marruecos);
@@ -175,7 +174,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoG = new Grupo("Grupa G",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo G");
+        System.out.println("Grupo G");
         grupoG.agregarEquipo(bélgica);
         grupoG.agregarEquipo(canadá);
         grupoG.agregarEquipo(marruecos);
@@ -193,10 +192,11 @@ public class Main {
         grupoG.agregarPartidos(new Partido(new Date(3,4,2022),camerún,brasil,new Resultado(0,2)));
         System.out.println(grupoG.getPartidos().get(5).getLocal().getNombre()+" "+grupoG.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoG.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoG.getPartidos().get(5).getVisitante().getNombre());
         grupoG.fijarPuntajeDelGrupo(grupoG);
+        grupoG.getEquiposQueAvanzan();
         System.out.println("");
 
         Grupo grupoH = new Grupo("Grupa H",new ArrayList<Partido>(0));
-        System.out.println("Mundial.Grupo H");
+        System.out.println("Grupo H");
         grupoH.agregarEquipo(bélgica);
         grupoH.agregarEquipo(canadá);
         grupoH.agregarEquipo(marruecos);
@@ -214,6 +214,7 @@ public class Main {
         grupoH.agregarPartidos(new Partido(new Date(3,4,2022),coreaDelSur,portugal,new Resultado(0,2)));
         System.out.println(grupoH.getPartidos().get(5).getLocal().getNombre()+" "+grupoH.getPartidos().get(5).getResultado().getGolesLocales()+"-"+grupoH.getPartidos().get(5).getResultado().getGolesVisitantes()+" "+grupoH.getPartidos().get(5).getVisitante().getNombre());
         grupoH.fijarPuntajeDelGrupo(grupoH);
+        grupoH.getEquiposQueAvanzan();
         System.out.println("");
        //Grupos
 
