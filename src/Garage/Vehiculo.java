@@ -3,12 +3,23 @@ package Garage;
 public class Vehiculo {
     private String marca;
     private double kilometraje;
+
     private int numeroDeRuedas;
 
-    public Vehiculo(String marca, double kilometraje, int numeroDeRuedas) {
+
+    public int getNumeroDeRuedas() {
+        return numeroDeRuedas;
+    }
+
+    public void setNumeroDeRuedas(int numeroDeRuedas) {
+        this.numeroDeRuedas = numeroDeRuedas;
+    }
+
+    public Vehiculo(String marca, double kilometraje) {
         this.marca = marca;
         this.kilometraje = kilometraje;
         this.numeroDeRuedas = numeroDeRuedas;
+
     }
 
     public String getMarca() {
@@ -27,11 +38,5 @@ public class Vehiculo {
         this.kilometraje = kilometraje;
     }
 
-    public int getNumeroDeRuedas() {
-        return numeroDeRuedas;
-    }
 
-    public void setNumeroDeRuedas(int numeroDeRuedas) {
-        this.numeroDeRuedas = numeroDeRuedas;
-    }
 }

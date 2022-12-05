@@ -8,12 +8,34 @@ public class Garage {
     private ArrayList<Vehiculo> vehiculos;
     private int contadorDeVehiculosActuales;
 
+    private double precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales;
+    private double kilometrajePromedio;
+
+    public double getKilometrajePromedio() {
+        return kilometrajePromedio;
+    }
+
+    public void setKilometrajePromedio(double kilometrajePromedio) {
+        this.kilometrajePromedio = kilometrajePromedio;
+    }
 
     public Garage(double precioDeCambioDeUnaRueda, int capacidadDeVehiculos) {
         this.precioDeCambioDeUnaRueda = precioDeCambioDeUnaRueda;
         this.capacidadDeVehiculos = capacidadDeVehiculos;
         this.contadorDeVehiculosActuales= 0;
         this.vehiculos = new ArrayList<Vehiculo>(0);
+        this.precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales=precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales;
+        this.kilometrajePromedio=kilometrajePromedio;
+    }
+
+
+
+    public double getPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales() {
+        return precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales;
+    }
+
+    public void setPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales(double precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales) {
+        this.precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales = precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales;
     }
 
     public double getPrecioDeCambioDeUnaRueda() {
@@ -62,21 +84,31 @@ public class Garage {
         this.contadorDeVehiculosActuales= getContadorDeVehiculosActuales()-1;
         System.out.println("El vehiculo "+ vehiculos.getMarca()+" fue removido con exito");
     }
-public double precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículos(){
-        new double
+public void kilometrajePromedio(){
         for (int i=0;i<getVehiculos().size();i++){
-
+            kilometrajePromedio =getKilometrajePromedio() + getVehiculos().get(i).getKilometraje();
         }
+        kilometrajePromedio = getKilometrajePromedio()/getContadorDeVehiculosActuales();
+    System.out.println("Kilometraje promedio entre todos los vehiculos: "+getKilometrajePromedio());
 }
+    public void precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales(){
+        for (int i=0;i<getVehiculos().size();i++){
+            precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales = precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales + getVehiculos().get(i).getNumeroDeRuedas() * getPrecioDeCambioDeUnaRueda();
+        }
+        System.out.println("Precio de cambio de ruedas de todos los vehiculos actuales: "+getPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales()+"$");
+    }
     public void mostrarInformacionDelGarajeYSusVehiculosActuales(){
+        System.out.println("");
+        System.out.println("*** Información general del Garage ***");
         System.out.println("Cantidad de vehiculos actuales: "+getContadorDeVehiculosActuales());
         System.out.println("");
         System.out.println("Capacidad maxima de vehiculos: "+getCapacidadDeVehiculos());
         System.out.println("");
         System.out.println("Precio de cambio de una rueda: "+getPrecioDeCambioDeUnaRueda());
-
+        System.out.println("");
+        System.out.println("*** Información de los vehiculos ***");
         for (int i=0;i<getVehiculos().size();i++){
-            System.out.println("*** Información de los vehiculos ***");
+
             System.out.println(getVehiculos().get(i).toString());
         }
         System.out.println("");

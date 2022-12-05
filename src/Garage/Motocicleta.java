@@ -3,9 +3,13 @@ package Garage;
 public class Motocicleta extends Vehiculo{
     private double cilindrada;
 
-    public Motocicleta(String marca, double kilometraje, int numeroDeRuedas, double cilindrada) {
-        super(marca, kilometraje, numeroDeRuedas=2);
+
+
+
+    public Motocicleta(String marca, double kilometraje, double cilindrada) {
+        super(marca, kilometraje);
         this.cilindrada = cilindrada;
+        this.setNumeroDeRuedas(2);
     }
 
     public double getCilindrada() {
@@ -18,10 +22,10 @@ public class Motocicleta extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Motocicleta{" +
-                "Marca:"+ getMarca() +" / "+
-                "cilindrada=" + getCilindrada() +
-                "Kilometraje: " + getKilometraje()+" / "+
-                '}';
+        return " Motocicleta{" +
+                "Marca:"+ getMarca() +" - "+
+                "Cilindrada: " + getCilindrada() + " - "+
+                "Kilometraje: " + getKilometraje()+" - "+
+                " }";
     }
 }
