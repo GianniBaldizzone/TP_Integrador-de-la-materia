@@ -1,4 +1,5 @@
-package Garage;
+package Garage.sistemaDeGarage;
+import Garage.vehiculos.Vehiculo;
 
 import java.util.ArrayList;
 
@@ -72,7 +73,7 @@ public class Garage {
 
     public void agregarVehiculo( Vehiculo vehiculos){
         if (getContadorDeVehiculosActuales()>=getCapacidadDeVehiculos()){
-            System.out.println("Ha llegado a la capacidad maxima de vehiculos si desea agregar nuevos remueva alguno");
+            System.out.println("Ha llegado a la capacidad maxima de Garage.vehiculos si desea agregar nuevos remueva alguno");
         }else {
             getVehiculos().add(vehiculos);
             this.contadorDeVehiculosActuales = getContadorDeVehiculosActuales() + 1;
@@ -89,24 +90,24 @@ public void kilometrajePromedio(){
             kilometrajePromedio =getKilometrajePromedio() + getVehiculos().get(i).getKilometraje();
         }
         kilometrajePromedio = getKilometrajePromedio()/getContadorDeVehiculosActuales();
-    System.out.println("Kilometraje promedio entre todos los vehiculos: "+getKilometrajePromedio());
+    System.out.println("Kilometraje promedio entre todos los Garage.vehiculos: "+getKilometrajePromedio());
 }
     public void precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales(){
         for (int i=0;i<getVehiculos().size();i++){
             precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales = precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales + getVehiculos().get(i).getNumeroDeRuedas() * getPrecioDeCambioDeUnaRueda();
         }
-        System.out.println("Precio de cambio de ruedas de todos los vehiculos actuales: "+getPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales()+"$");
+        System.out.println("Precio de cambio de ruedas de todos los Garage.vehiculos actuales: "+getPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales()+"$");
     }
     public void mostrarInformacionDelGarajeYSusVehiculosActuales(){
         System.out.println("");
         System.out.println("*** Información general del Garage ***");
-        System.out.println("Cantidad de vehiculos actuales: "+getContadorDeVehiculosActuales());
+        System.out.println("Cantidad de Garage.vehiculos actuales: "+getContadorDeVehiculosActuales());
         System.out.println("");
-        System.out.println("Capacidad maxima de vehiculos: "+getCapacidadDeVehiculos());
+        System.out.println("Capacidad maxima de Garage.vehiculos: "+getCapacidadDeVehiculos());
         System.out.println("");
         System.out.println("Precio de cambio de una rueda: "+getPrecioDeCambioDeUnaRueda());
         System.out.println("");
-        System.out.println("*** Información de los vehiculos ***");
+        System.out.println("*** Información de los Garage.vehiculos ***");
         for (int i=0;i<getVehiculos().size();i++){
 
             System.out.println(getVehiculos().get(i).toString());

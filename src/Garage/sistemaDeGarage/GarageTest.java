@@ -1,5 +1,7 @@
-package Garage;
-
+package Garage.sistemaDeGarage;
+import Garage.vehiculos.Vehiculo;
+import Garage.vehiculos.Auto;
+import Garage.vehiculos.Motocicleta;
 public class GarageTest {
     public static void main(String[] args) {
 

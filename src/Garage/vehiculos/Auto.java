@@ -1,4 +1,4 @@
-package Garage;
+package Garage.vehiculos;
 
 public class Auto extends Vehiculo{
     private int numeroDePuertas;

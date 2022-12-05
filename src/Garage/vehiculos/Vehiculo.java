@@ -1,4 +1,4 @@
-package Garage;
+package Garage.vehiculos;
 
 public class Vehiculo {
     private String marca;

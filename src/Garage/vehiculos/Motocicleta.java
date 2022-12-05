@@ -1,4 +1,4 @@
-package Garage;
+package Garage.vehiculos;
 
 public class Motocicleta extends Vehiculo{
     private double cilindrada;
