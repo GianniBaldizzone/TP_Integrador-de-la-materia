@@ -1,3 +1,5 @@
+package Mundial;
+
 public class Resultado {
     private int golesLocales;
     private int golesVisitantes;

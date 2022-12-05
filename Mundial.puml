@@ -1,25 +1,24 @@
 @startuml
-class Llave {
-+ <<Create>> Llave(String,ArrayList<Partido>)
-+ ArrayList<Equipo> getEquiposQueAvanzan()
+class Mundial.Llave {
++ <<Create>> Mundial.Llave(String,ArrayList<Mundial.Partido>)
++ ArrayList<Mundial.Equipo> getEquiposQueAvanzan()
 }
-class Main {
+class Mundial.Main {
 + {static} void main(String[])
 }
-class Equipo {
+class Mundial.Equipo {
 - String nombre
-- ArrayList<Partido> partidosJugados
-+ <<Create>> Equipo(String,ArrayList<Partido>)
+- ArrayList<Mundial.Partido> partidosJugados
++ <<Create>> Mundial.Equipo(String,ArrayList<Mundial.Partido>)
 + String getNombre()
 + void setNombre(String)
-+ ArrayList<Partido> getPartidosJugados()
-+ void setPartidosJugados(ArrayList<Partido>)
++ ArrayList<Mundial.Partido> getPartidosJugados()
 }
-class Resultado {
+class Mundial.Resultado {
 - int golesLocales
 - int golesVisitantes
-+ <<Create>> Resultado(int,int)
-+ <<Create>> Resultado()
++ <<Create>> Mundial.Resultado(int,int)
++ <<Create>> Mundial.Resultado()
 + int getGolesLocales()
 + void setGolesLocales(int)
 + int getGolesVisitantes()
@@ -27,38 +26,38 @@ class Resultado {
 + boolean ganoLocal()
 + boolean empate()
 }
-class Grupo {
-+ <<Create>> Grupo(String,ArrayList<Partido>)
-+ ArrayList<Equipo> getEquiposQueAvanzan()
+class Mundial.Grupo {
++ <<Create>> Mundial.Grupo(String,ArrayList<Mundial.Partido>)
++ ArrayList<Mundial.Equipo> getEquiposQueAvanzan()
 }
-class Partido {
+class Mundial.Partido {
 - Date fecha
-- Equipo local
-- Equipo visitante
-- Resultado resultado
-+ <<Create>> Partido(Date,Equipo,Equipo)
+- Mundial.Equipo local
+- Mundial.Equipo visitante
+- Mundial.Resultado resultado
++ <<Create>> Mundial.Partido(Date,Mundial.Equipo,Mundial.Equipo)
 + Date getFecha()
 + void setFecha(Date)
-+ Equipo getLocal()
-+ void setLocal(Equipo)
-+ Equipo getVisitante()
-+ void setVisitante(Equipo)
-+ Resultado getResultado()
-+ void setResultado(Resultado)
++ Mundial.Equipo getLocal()
++ void setLocal(Mundial.Equipo)
++ Mundial.Equipo getVisitante()
++ void setVisitante(Mundial.Equipo)
++ Mundial.Resultado getResultado()
++ void setResultado(Mundial.Resultado)
 }
-class EtapaMundial {
+class Mundial.EtapaMundial {
 - String descripcionEtapa
-- ArrayList<Partido> partidos
-+ <<Create>> EtapaMundial(String,ArrayList<Partido>)
+- ArrayList<Mundial.Partido> partidos
++ <<Create>> Mundial.EtapaMundial(String,ArrayList<Mundial.Partido>)
 + void setDescripcionEtapa(String)
-+ void setPartidos(ArrayList<Partido>)
++ void setPartidos(ArrayList<Mundial.Partido>)
 + String getDescripcionEtapa()
-+ ArrayList<Partido> getPartidos()
-+ ArrayList<Equipo> getEquiposQueAvanzan()
-+ void addPartido(Partido)
++ ArrayList<Mundial.Partido> getPartidos()
++ ArrayList<Mundial.Equipo> getEquiposQueAvanzan()
++ void addPartido(Mundial.Partido)
 }
 
 
-EtapaMundial <|-- Llave
-EtapaMundial <|-- Grupo
+Mundial.EtapaMundial <|-- Mundial.Llave
+Mundial.EtapaMundial <|-- Mundial.Grupo
 @enduml

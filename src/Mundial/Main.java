@@ -1,3 +1,5 @@
+package Mundial;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -47,7 +49,7 @@ public class Main {
 
         //Grupos
         Grupo grupoA = new Grupo("Grupa A",new ArrayList<Partido>(0));
-        System.out.println("Grupo A");
+        System.out.println("Mundial.Grupo A");
         grupoA.agregarEquipo(catar);
         grupoA.agregarEquipo(ecuador);
         grupoA.agregarEquipo(holanda);
@@ -68,7 +70,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoB = new Grupo("Grupa B",new ArrayList<Partido>(0));
-        System.out.println("Grupo B");
+        System.out.println("Mundial.Grupo B");
         grupoB.agregarEquipo(inglaterra);
         grupoB.agregarEquipo(iran);
         grupoB.agregarEquipo(estadosUnidos);
@@ -88,8 +90,8 @@ public class Main {
         grupoB.fijarPuntajeDelGrupo(grupoB);
         System.out.println("");
 
-        Grupo grupoC = new Grupo("Grupo C",new ArrayList<Partido>(0));
-        System.out.println("Grupo C");
+        Grupo grupoC = new Grupo("Mundial.Grupo C",new ArrayList<Partido>(0));
+        System.out.println("Mundial.Grupo C");
         grupoC.agregarEquipo(argentina);
         grupoC.agregarEquipo(mexico);
         grupoC.agregarEquipo(polonia);
@@ -110,7 +112,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoD = new Grupo("Grupa D",new ArrayList<Partido>(0));
-        System.out.println("Grupo D");
+        System.out.println("Mundial.Grupo D");
         grupoD.agregarEquipo(francia);
         grupoD.agregarEquipo(australia);
         grupoD.agregarEquipo(dinamarca);
@@ -131,7 +133,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoE = new Grupo("Grupa E",new ArrayList<Partido>(0));
-        System.out.println("Grupo E");
+        System.out.println("Mundial.Grupo E");
         grupoE.agregarEquipo(españa);
         grupoE.agregarEquipo(costaRica);
         grupoE.agregarEquipo(alemania);
@@ -152,7 +154,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoF = new Grupo("Grupa F",new ArrayList<Partido>(0));
-        System.out.println("Grupo F");
+        System.out.println("Mundial.Grupo F");
         grupoF.agregarEquipo(bélgica);
         grupoF.agregarEquipo(canadá);
         grupoF.agregarEquipo(marruecos);
@@ -173,7 +175,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoG = new Grupo("Grupa G",new ArrayList<Partido>(0));
-        System.out.println("Grupo G");
+        System.out.println("Mundial.Grupo G");
         grupoG.agregarEquipo(bélgica);
         grupoG.agregarEquipo(canadá);
         grupoG.agregarEquipo(marruecos);
@@ -194,7 +196,7 @@ public class Main {
         System.out.println("");
 
         Grupo grupoH = new Grupo("Grupa H",new ArrayList<Partido>(0));
-        System.out.println("Grupo H");
+        System.out.println("Mundial.Grupo H");
         grupoH.agregarEquipo(bélgica);
         grupoH.agregarEquipo(canadá);
         grupoH.agregarEquipo(marruecos);
