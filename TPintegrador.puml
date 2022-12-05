@@ -1,0 +1,137 @@
+@startuml
+class Mundial.Resultado {
+- int golesLocales
+- int golesVisitantes
++ <<Create>> Resultado(int,int)
++ <<Create>> Resultado()
++ int getGolesLocales()
++ void setGolesLocales(int)
++ int getGolesVisitantes()
++ void setGolesVisitantes(int)
++ boolean ganoLocal()
++ boolean empate()
+}
+class Mundial.Partido {
+- Date fecha
+- Equipo local
+- Equipo visitante
+- Resultado resultado
++ <<Create>> Partido(Date,Equipo,Equipo,Resultado)
++ Date getFecha()
++ void setFecha(Date)
++ Equipo getLocal()
++ void setLocal(Equipo)
++ Equipo getVisitante()
++ void setVisitante(Equipo)
++ Resultado getResultado()
++ void setResultado(Resultado)
+}
+class Garage.sistemaDeGarage.GarageTest {
++ {static} void main(String[])
+}
+class Mundial.EtapaMundial {
+- String descripcionEtapa
+- ArrayList<Partido> partidos
++ <<Create>> EtapaMundial(String,ArrayList<Partido>)
++ void setDescripcionEtapa(String)
++ void setPartidos(ArrayList<Partido>)
++ String getDescripcionEtapa()
++ ArrayList<Partido> getPartidos()
++ ArrayList<Equipo> getEquiposQueAvanzan()
++ void agregarPartidos(Partido)
++ void removerPartidos(Partido)
+}
+class Mundial.Grupo {
+- ArrayList<Equipo> equipos
+- Equipo primerLugarDelGrupo
+- Equipo segundoLugarDelGrupo
++ <<Create>> Grupo(String,ArrayList<Partido>)
++ Equipo getPrimerLugarDelGrupo()
++ void setPrimerLugarDelGrupo(Equipo)
++ Equipo getSegundoLugarDelGrupo()
++ void setSegundoLugarDelGrupo(Equipo)
++ ArrayList<Equipo> getEquipos()
++ void setEquipos(ArrayList<Equipo>)
++ void fijarPuntajeDelGrupo(Grupo)
++ ArrayList<Equipo> getEquiposQueAvanzan()
++ void agregarEquipo(Equipo)
+}
+class Garage.sistemaDeGarage.Garage {
+- double precioDeCambioDeUnaRueda
+- int capacidadDeVehiculos
+- ArrayList<Vehiculo> vehiculos
+- int contadorDeVehiculosActuales
+- double precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales
+- double kilometrajePromedio
++ <<Create>> Garage(double,int)
++ double getKilometrajePromedio()
++ void setKilometrajePromedio(double)
++ double getPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales()
++ void setPrecioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales(double)
++ double getPrecioDeCambioDeUnaRueda()
++ void setPrecioDeCambioDeUnaRueda(double)
++ int getCapacidadDeVehiculos()
++ void setCapacidadDeVehiculos(int)
++ ArrayList<Vehiculo> getVehiculos()
++ void setVehiculos(ArrayList<Vehiculo>)
++ int getContadorDeVehiculosActuales()
++ void setContadorDeVehiculosActuales(int)
++ void agregarVehiculo(Vehiculo)
++ void removerVehiculo(Vehiculo)
++ void kilometrajePromedio()
++ void precioQueSupondríaCambiarTodasLasRuedasDeTodosLosVehículosActuales()
++ void mostrarInformacionDelGarajeYSusVehiculosActuales()
+}
+class Garage.vehiculos.Vehiculo {
+- String marca
+- double kilometraje
+- int numeroDeRuedas
++ <<Create>> Vehiculo(String,double)
++ int getNumeroDeRuedas()
++ void setNumeroDeRuedas(int)
++ String getMarca()
++ void setMarca(String)
++ double getKilometraje()
++ void setKilometraje(double)
+}
+class Mundial.Equipo {
+- String nombre
+- ArrayList<Partido> partidosJugados
+- int puntaje
++ <<Create>> Equipo(String)
++ int getPuntaje()
++ void setPuntaje(int)
++ String getNombre()
++ void setNombre(String)
++ ArrayList<Partido> getPartidosJugados()
++ void setPartidosJugados(ArrayList<Partido>)
+}
+class Mundial.Llave {
++ <<Create>> Llave(String,ArrayList<Partido>)
++ ArrayList<Equipo> getEquiposQueAvanzan()
++ String toString()
+}
+class Garage.vehiculos.Auto {
+- int numeroDePuertas
++ <<Create>> Auto(String,double,int)
++ int getNumeroDePuertas()
++ void setNumeroDePuertas(int)
++ String toString()
+}
+class Garage.vehiculos.Motocicleta {
+- double cilindrada
++ <<Create>> Motocicleta(String,double,double)
++ double getCilindrada()
++ void setCilindrada(double)
++ String toString()
+}
+class Mundial.Main {
++ {static} void main(String[])
+}
+
+
+Mundial.EtapaMundial <|-- Mundial.Grupo
+Mundial.EtapaMundial <|-- Mundial.Llave
+Garage.vehiculos.Vehiculo <|-- Garage.vehiculos.Auto
+Garage.vehiculos.Vehiculo <|-- Garage.vehiculos.Motocicleta
+@enduml
