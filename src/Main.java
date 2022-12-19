@@ -43,6 +43,12 @@ public class Main {
         //Mundial
         System.out.println("COMIENZA EL MUNDIAL 2022");
         System.out.println("");
+
+        String[] paises = {"Catar"};
+        ArrayList<Equipo> paisesParticipantes = new ArrayList<>();
+        for (int i = 0; i < paises.length; i++) {
+            paisesParticipantes.add(new Equipo(paises[i]))
+        }
         //Equipos
         Equipo catar = new Equipo("Catar");
         Equipo ecuador = new Equipo("Ecuador");
